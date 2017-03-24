@@ -1,0 +1,4 @@
+cybergate
+cc:- start
+options: select listining ports
+builder : create server := new user := enter ip:port number , enter pass
