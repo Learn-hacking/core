@@ -1,0 +1,5 @@
+sniffing = mitm (man in the middle )
+
+tools:-
+canable+> sniffer tab > configure > select your ip > click start and stop button > click "+" button > alt text > click any where to highlight button 
+> select gateway > select all > ok

